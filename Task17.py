@@ -7,6 +7,7 @@ N = int(input("Enter array size:"))
 numbers = []
 for i in range(N):
     numbers.append(random.randint(-N, N))
+print(numbers)
 count = 1
 with open('numbers.txt', 'r') as f:
     for i in f:
