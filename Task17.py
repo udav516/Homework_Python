@@ -11,6 +11,5 @@ print(numbers)
 count = 1
 with open('numbers.txt', 'r') as f:
     for i in f:
-        print(i)
         count = count * numbers[int(i)]
 print(count)
