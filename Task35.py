@@ -7,14 +7,10 @@ file1 = '33_Polynomial.txt'
 file2 = '33_Polynomial2.txt'
 file_sum = '35_Sum_polynomials.txt'
 
-# Получение данных из файла
-
 def read_pol(file):
     with open(str(file), 'r') as data:
         pol = data.read()
     return pol
-
-# Получение списка кортежей каждого (<коэффициент>, <степень>)
 
 def convert_pol(pol):
     pol = pol.replace('= 0', '')
@@ -28,8 +24,6 @@ def convert_pol(pol):
     pol = [tuple(int(x) for x in j if x != 'x') for j in pol]
     return pol
 
-# Получение списка кортежей суммы (<коэф1 + коэф2>, <степень>)
-
 def fold_pols(pol1, pol2):
     x = [0] * (max(pol1[0][1], pol2[0][1] + 1))
     for i in pol1 + pol2:
@@ -37,8 +31,6 @@ def fold_pols(pol1, pol2):
     res = [(x[i], i) for i in range(len(x)) if x[i] != 0]
     res.sort(key = lambda r: r[1], reverse = True)
     return res
-
-# Составление итогового многочлена
 
 def get_sum_pol(pol):
     var = ['*x^'] * len(pol)
