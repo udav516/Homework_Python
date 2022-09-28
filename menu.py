@@ -4,7 +4,6 @@ from search_data import txt_input
 from search_data import search
 from search_data import print_all
 from export import data_add
-from log import log_add
 
 def print_menu():
     print('''Это пользовательский интерфейс
