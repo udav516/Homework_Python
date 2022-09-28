@@ -4,7 +4,7 @@ from search_data import txt_input
 from search_data import search
 from search_data import print_all
 from export import data_add
-
+from log import log_add
 
 def print_menu():
     print('''Это пользовательский интерфейс
@@ -14,13 +14,11 @@ def print_menu():
            4. Выход из программы
              ''')
 
-
 def input_option():
     number = '0'
     while number not in '1 2 3 4'.split():
         number = input('Введите число ')
     return number
-
 
 def interface():
     while True:
@@ -38,3 +36,4 @@ def interface():
             data_add()
         elif number == '4':
             sys.exit()
+
