@@ -1,6 +1,5 @@
 import time
 
-
 def txt_input(rad):
     f = open('data.txt', 'r', encoding="utf-8")
     num = f.readlines()
@@ -13,11 +12,9 @@ def txt_input(rad):
     f.close()
     return user_list
 
-
 def search():
     list = txt_input('data.txt')
     request = input('Кого искать?: ')
-
     t = True
     for i in list:
         if i['LastName'] == request or i['Name'] == request or i['Number'] == request:
@@ -25,9 +22,7 @@ def search():
             t = False
     if t:
         print('Нет такого usera')
-
     input('нажмите Enter для продолжения')
-
 
 def print_all(list):
     for i in list:
